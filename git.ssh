@@ -1,0 +1,3 @@
+Host github.com
+  IdentityFile /etc/ssh/github.key
+  IdentitiesOnly yes

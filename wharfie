@@ -6,6 +6,13 @@ if [ "$#" -ne 2 ]; then
   exit 1
 fi
 
+# check if git needs ssh
+if [ ${1:0:4} = "git@" ]; then
+  apk add openssh-client && mkdir ~/.ssh
+  ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+  cat /etc/ssh/git.config >> ~/.ssh/config
+fi
+
 # bootstrap container
 git clone "$1" /opt && \
   chmod +x "/opt/$2" && \
