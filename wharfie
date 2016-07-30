@@ -1,0 +1,13 @@
+#! /bin/sh
+
+# check args
+if [ "$#" -ne 2 ]; then
+  echo "usage: <repository> <executable>"
+  exit 1
+fi
+
+# bootstrap container
+git clone "$1" /opt && \
+  chmod +x "/opt/$2" && \
+  eval "/opt/$2"
+
