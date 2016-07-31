@@ -2,7 +2,7 @@
 
 # check args
 if [ "$#" -ne 2 ]; then
-  echo "usage: <repository> <executable>"
+  echo "usage: $0 <repository> <executable>"
   exit 1
 fi
 
@@ -10,7 +10,7 @@ fi
 if [ ${1:0:4} = "git@" ]; then
   apk add openssh-client && mkdir ~/.ssh
   ssh-keyscan -H github.com >> ~/.ssh/known_hosts
-  cat /etc/ssh/git.config >> ~/.ssh/config
+  cat /etc/ssh/config >> ~/.ssh/config
 fi
 
 # bootstrap container
