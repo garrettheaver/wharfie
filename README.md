@@ -19,6 +19,6 @@ If you want to pull from a private GitHub repository (*git@*) then you'll want t
 
 Example:
 ```shell
-docker run -d -v ~/.ssh/github.key:/etc/ssh/github.key:ro garrettheaver/wharfie git@github.com/<user>/<repo>.git bootstrap.sh
+docker run -d -v ~/.ssh/github.key:/etc/ssh/github.key:ro garrettheaver/wharfie <repo> <script>
 ```
 
