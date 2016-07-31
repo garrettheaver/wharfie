@@ -3,6 +3,7 @@ Rather than building a new docker image and redeploying every time you make a co
 
 ## Basic Usage
 The Wharfie container is built on Alpine Linux and it's entrypoint expects two arguments
+
 1. The git repository from which you want to pull code (*https* and *git@* protocols supported)
 2. The name of the executable within the repo to invoke after cloning
 
