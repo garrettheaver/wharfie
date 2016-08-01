@@ -22,7 +22,7 @@ if [ ! -d "/opt/.git" ]; then
 else
 
   # simple update required
-  $(cd /opt && git pull origin)
+  git -C /opt pull origin
 
 fi
 
