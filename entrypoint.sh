@@ -1,10 +1,13 @@
 #! /bin/sh
 
-# check args
+# check correct args
 if [ "$#" -ne 2 ]; then
-  echo "usage: $0 <repo> <script>"
+  echo "usage: <repo> <script>"
   exit 1
 fi
+
+# useful log info
+echo "wharfie: $1, $2"
 
 # initial container startup
 if [ ! -d "/opt/.git" ]; then
