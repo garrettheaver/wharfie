@@ -31,7 +31,7 @@ if [ ! -d "/opt/.git" ]; then
 else
 
   # simple update required
-  echo "git: pull `git config --get remote.origin.url`"
+  echo "git: pull `git -C /opt config --get remote.origin.url`"
   git -C /opt pull origin
 
 fi
