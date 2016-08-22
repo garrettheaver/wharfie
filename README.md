@@ -22,3 +22,11 @@ Example:
 docker run -d -v ~/.ssh/github.key:/etc/ssh/github.key:ro garrettheaver/wharfie <repo> <script>
 ```
 
+## ARM Variant
+Wharfie also has a build for armhf devices such as *RPi* and *ODroid*. The only difference between the armhf and x86/64 variant is the base image used which in the case of armhf is *container4armhf/armhf-alpine*. An armhf container can be started by simply using the image *garrettheaver/armhf-wharfie*.
+
+Example:
+```shell
+docker run -d garrettheaver/armhf-wharfie https://github.com/<user>/<repo>.git bootstrap.sh
+```
+
