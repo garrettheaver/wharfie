@@ -14,7 +14,7 @@ if [ ! -d "/opt/.git" ]; then
 
   # check if git needs ssh
   if [ ${1:0:4} = "git@" ]; then
-    apk add openssh-client && mkdir -p ~/.ssh
+    apk update && apk add openssh-client && mkdir -p ~/.ssh
     ssh-keyscan -H github.com >> ~/.ssh/known_hosts
     cat /etc/ssh/config >> ~/.ssh/config
   fi
